@@ -17,6 +17,8 @@ namespace Models.Data
         {
             modelBuilder.ApplyConfiguration(new StatusOperadorMap());
             modelBuilder.ApplyConfiguration(new OperadorMap());
-        }
+           
+               }
+
     }
 }

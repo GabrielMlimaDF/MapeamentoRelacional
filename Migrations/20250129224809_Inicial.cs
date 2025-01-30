@@ -5,11 +5,24 @@
 namespace Models.Migrations
 {
     /// <inheritdoc />
-    public partial class TabOperador : Migration
+    public partial class Inicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "StatusOperador",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Descricao = table.Column<string>(type: "NVARCHAR(100)", maxLength: 100, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatusOperador", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Operador",
                 columns: table => new
@@ -41,6 +54,9 @@ namespace Models.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Operador");
+
+            migrationBuilder.DropTable(
+                name: "StatusOperador");
         }
     }
 }

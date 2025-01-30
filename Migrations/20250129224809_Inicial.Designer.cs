@@ -11,8 +11,8 @@ using Models.Data;
 namespace Models.Migrations
 {
     [DbContext(typeof(ContextApp))]
-    [Migration("20250129133017_TabOperador")]
-    partial class TabOperador
+    [Migration("20250129224809_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
